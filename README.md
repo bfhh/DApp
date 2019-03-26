@@ -295,8 +295,13 @@ contract Project{
 
 ## 编写合约遇到的坑
 
-余额添加
-
+余额添加`function contribute()`给地址投资函数中判断投资金额是否已经达到投资上限
+```shell
+//uint newBalance = address(this).balance.add(msg.value);
+//require(newBalance <= goal,"total amount shoule not exceed goal");
+require(address(this).balance <= goal,"total amount shoule not exceed goal");
+```
+上面那两行代码是错的，是因为当你调用这个函数的时候，此时地址的余额`address(this).balance`已经加上本次的`msg.value`了。
 ## 编译脚本
 
 首先安装编译工具和fs-extra包(主要用来处理文件读取) 
