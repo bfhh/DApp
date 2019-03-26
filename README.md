@@ -817,5 +817,4 @@ const getContract = address =>
 export default getContract;
 
 ```
-
 后续步骤就比较容易了，主要是react语法，js获取从区块链上获取数据然后填充数据，可以参照这个地址获取后续内容
