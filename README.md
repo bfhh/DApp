@@ -281,6 +281,19 @@ contract Project{
         payment.completed = true;
         
     }
+    //获取当前项目详情
+    function getSummary() public view returns (string, uint, uint, uint, uint, uint, uint, address){
+        return (
+            description,
+            minInvest,
+            maxInvest,
+            goal,
+            address(this).balance,
+            investorCount,
+            payments.length,
+            owner
+        );
+    }
     
 }
 
