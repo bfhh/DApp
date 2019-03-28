@@ -117,7 +117,7 @@ Listening on 127.0.0.1:8545
 我们可以利用[remix](https://remix.ethereum.org/)编写我们的智能合约
 
 下面是我们的智能合约代码
-```
+```sol
 pragma solidity ^0.4.25;
 
 //保证合约内部的四则运算的安全，常见的即使一个数超出uint256后会变成一个最小的数
